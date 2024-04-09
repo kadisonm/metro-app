@@ -2,8 +2,11 @@
   "name": "metro-app",
   "version": "0.1.0",
   "description": "A mock metro app for a school assignment.",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
+    "start": "obsidian .",
+    "dev": "node esbuild.config.mjs && nodemon --watch src --exec npm run start",
+    "build": "node esbuild.config.mjs production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -13,7 +16,11 @@
   "author": "Kadison McLellan",
   "license": "MIT",
   "devDependencies": {
+    "@types/node": "^20.12.5",
+    "electron": "^29.2.0",
     "eletron": "^0.0.1-security",
+    "esbuild": "^0.20.2",
+    "nodemon": "^3.1.0",
     "preact": "^10.20.1",
     "typescript": "^5.4.4"
   }
