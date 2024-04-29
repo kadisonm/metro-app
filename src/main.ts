@@ -20,7 +20,7 @@ const createWindow = () => {
   });
 }
 
-console.log("teste")
+console.log("testeeeeee")
 
 app.on("ready", createWindow);
 

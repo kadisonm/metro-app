@@ -18,7 +18,6 @@ const buildOptions = {
 	bundle: true,
 	external: [
 		"electron",
-		"electron-reload"
 	],
 	format: "cjs",
 	target: "es2018",
