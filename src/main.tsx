@@ -1,4 +1,7 @@
 import { app, BrowserWindow } from "electron";
+import { render } from "preact";
+
+import WindowComponent from "./ui/window";
 
 let mainWindow: BrowserWindow | null;
 
@@ -14,6 +17,8 @@ const createWindow = () => {
   });
 
   mainWindow.loadFile('src/index.html');
+
+  //render(<WindowComponent/>, document.body);
 
   mainWindow.on("closed", () => {
     mainWindow = null;
@@ -33,5 +38,6 @@ app.on("window-all-closed", () => {
 app.on("activate", () => {
   if (mainWindow === null) {
     createWindow();
+    mainWindow.webContents.executeJavaScript(`render(<WindowComponent/>, document.body)`);
   }
 });
