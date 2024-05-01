@@ -19,7 +19,7 @@ const buildOptions = {
 	external: [
 		"electron",
 	],
-	format: "cjs",
+	format: "esm",
 	target: "es2018",
 	logLevel: "info",
 	sourcemap: "inline",
