@@ -1,15 +1,18 @@
 {
   "name": "metro-app",
+  "main": "main.js",
+  "author": "Kadison McLellan",
+  "description": "Demo Metro App",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "node esbuild.config.mjs && concurrently -n \"NEXT,ELECTRON\" -c \"yellow,blue\" --kill-others \"next dev\" \"electron .\"",
+    "build": "next build && electron-builder"
   },
   "dependencies": {
-    "next": "14.2.3",
+    "electron-serve": "^2.0.0",
+    "next": "^14.2.3",
     "react": "^18",
     "react-dom": "^18"
   },
@@ -20,6 +23,7 @@
     "concurrently": "^8.2.2",
     "electron": "^30.0.2",
     "electron-builder": "^24.13.3",
+    "esbuild": "^0.20.2",
     "eslint": "^8",
     "eslint-config-next": "14.2.3",
     "typescript": "^5"
