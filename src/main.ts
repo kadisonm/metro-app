@@ -2,16 +2,20 @@ import { app, BrowserWindow } from 'electron'
 import serve from 'electron-serve'
 import path from 'path'
 
+var dirName = app.getAppPath();
+
 const appServe = app.isPackaged ? serve({
-  directory: path.join(__dirname, "../out")
+  directory: path.join(dirName, "/out")
 }) : null;
 
 const createWindow = () => {
   const win = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width: 511,
+    height: 1080,
+    resizable: false,
+    title: "AdlMetro",
     webPreferences: {
-      preload: path.join(__dirname, "./preload.ts")
+      preload: path.join(dirName, "/src/preload.ts")
     }
   });
 
