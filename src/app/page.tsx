@@ -1,7 +1,7 @@
 'use client';
 
-import Image from "next/image";
-import styles from "./page.module.css";
+import Map from "./pages/map"
+import Header from "./components/header"
 
 export default function Home() {
   function clicked() {
@@ -9,14 +9,19 @@ export default function Home() {
   }
 
   return (
-    <div className="">
-      <h1>
-        test
-      </h1>
+    <>
+      <Header/>
+      <Map/>
 
-      <button onClick={() => {clicked()}}>
-        test
-      </button>
-    </div>  
+      <div className="">
+        <h1>
+          test
+        </h1>
+
+        <button onClick={() => {clicked()}}>
+          test
+        </button>
+      </div>  
+    </>
   );
 }

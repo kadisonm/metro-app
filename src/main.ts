@@ -10,8 +10,8 @@ const appServe = app.isPackaged ? serve({
 
 const createWindow = () => {
   const win = new BrowserWindow({
-    width: 511,
-    height: 1080,
+    width: 430,
+    height: 932,
     resizable: false,
     title: "AdlMetro",
     webPreferences: {
