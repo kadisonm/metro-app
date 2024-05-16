@@ -1,29 +1,33 @@
 {
   "name": "metro-app",
-  "version": "0.1.0",
-  "description": "A mock metro app for a school assignment.",
   "main": "main.js",
-  "scripts": {
-    "dev": "nodemon .",
-    "sass": "sass --watch src/scss/styles.scss styles.css",
-    "bundle": "node esbuild.config.mjs production",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "github.com/kadisonm/metro-app"
-  },
   "author": "Kadison McLellan",
-  "license": "MIT",
+  "description": "Demo Metro App",
+  "version": "0.1.0",
+  "private": true,
   "type": "module",
-  "devDependencies": {
-    "@types/node": "^20.12.5",
-    "esbuild": "^0.20.2",
-    "nodemon": "^3.1.0",
-    "sass": "^1.75.0",
-    "typescript": "^5.4.4"
+  "scripts": {
+    "dev": "node esbuild.config.mjs && concurrently -n \"NEXT,ELECTRON\" -c \"yellow,blue\" --kill-others \"next dev\" \"electron .\"",
+    "sass": "sass --watch src/app/scss/styles.scss src/app/globals.css",
+    "build": "next build && electron-builder"
   },
   "dependencies": {
-    "electron": "^30.0.1"
+    "electron-serve": "^2.0.0",
+    "next": "^14.2.3",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "concurrently": "^8.2.2",
+    "electron": "^30.0.2",
+    "electron-builder": "^24.13.3",
+    "esbuild": "^0.20.2",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.3",
+    "sass": "^1.77.1",
+    "typescript": "^5"
   }
 }

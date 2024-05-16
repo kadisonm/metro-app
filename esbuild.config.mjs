@@ -14,10 +14,11 @@ const buildOptions = {
 	banner: {
 		js: banner,
 	},
-	entryPoints: ["src/main.tsx"],
+	entryPoints: ["src/main.ts"],
 	bundle: true,
 	external: [
 		"electron",
+        "electron-serve",
 	],
 	format: "esm",
 	target: "es2018",
@@ -30,9 +31,5 @@ const buildOptions = {
 
 const context = await esbuild.context({...buildOptions});
 
-if (prod) {
-	await context.rebuild();
-	process.exit(0);
-} else {
-	await context.watch();
-}
+await context.rebuild();
+process.exit(0);

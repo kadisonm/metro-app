@@ -1,5 +1,0 @@
-{
-    "watch": ["./src"],
-    "ext": "ts,tsx,html,scss",
-    "exec": "npm run bundle && electron ."
-}
