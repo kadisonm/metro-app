@@ -1,0 +1,31 @@
+@import 'src/styles/variables';
+
+.primary {
+    margin: 0;
+    height: 51px;
+    width: 100%;
+    background-color: $background-header;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    .validated {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2px 20px 2px 20px;
+   
+        border-radius: 90px;
+        gap: 10px;
+
+        color: $text-inverted;
+
+        svg {
+            color: $text-inverted;
+        }
+
+        background: linear-gradient(to right, $header-gradient-start, $header-gradient-end);
+    }
+}
