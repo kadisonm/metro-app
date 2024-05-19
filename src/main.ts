@@ -14,9 +14,6 @@ const createWindow = () => {
     height: 932,
     resizable: false,
     title: "AdlMetro",
-    webPreferences: {
-      preload: path.join(dirName, "/src/preload.ts")
-    }
   });
 
   if (appServe != null) {

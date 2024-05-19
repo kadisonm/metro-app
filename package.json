@@ -8,7 +8,6 @@
   "type": "module",
   "scripts": {
     "dev": "node esbuild.config.mjs && concurrently -n \"NEXT,ELECTRON\" -c \"yellow,blue\" --kill-others \"next dev\" \"electron .\"",
-    "sass": "sass --watch src/app/scss/styles.scss src/app/globals.css",
     "build": "next build && electron-builder"
   },
   "dependencies": {
