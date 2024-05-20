@@ -1,21 +1,8 @@
 'use client';
 
+import { useRouter } from 'next/navigation'
+
 export default function Home() {
-  function clicked() {
-    console.log("clicked")
-  }
-
-  return (
-    <>
-      <div className="">
-        <h1>
-          test
-        </h1>
-
-        <button onClick={() => {clicked()}}>
-          test
-        </button>
-      </div>  
-    </>
-  );
+  const router = useRouter()
+  router.push("/map")
 }
