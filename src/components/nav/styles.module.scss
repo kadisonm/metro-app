@@ -16,18 +16,27 @@
     justify-content: space-around;
     align-items: center;
 
+    #current {
+        * {
+            color: $color-primary;
+        }  
+    }
+
+    :hover {
+        * {
+            color: $color-primary;
+        }
+    }
+
     .item {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding: 10px;
 
         h4 {
             font-weight: 600;
-        }
-
-        .active {
-            color: $color-primary;
         }
     }
 }
