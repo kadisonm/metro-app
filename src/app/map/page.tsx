@@ -6,13 +6,14 @@ export default function History() {
       <div className="">
         <h1>Map</h1>
 
-        <iframe
-          width="600"
-          height="450"
-          loading="lazy"
-          src="https://www.google.com/maps/embed/v1/place?key=API_KEY
-            &q=Space+Needle,Seattle+WA">
-        </iframe>
+        <div className="map">
+          <iframe
+            width="350"
+            height="600"
+            loading="lazy"
+            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAWifE8HCuECIIVcvpArqw-4qfdz3rZDrw&q=Space+Needle,Seattle+WA">
+          </iframe>
+        </div>
       </div>  
     </>
   );
