@@ -1,11 +1,11 @@
 'use client';
 
+import styles from './styles.module.scss'
+
 export default function History() {
   return (
-    <>
-      <div className="">
-        <h1>History</h1>
-      </div>  
-    </>
+    <div className={styles.primary}>
+      <h1>History</h1>
+    </div>  
   );
 }
