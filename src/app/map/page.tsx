@@ -1,29 +1,12 @@
 'use client';
 
-import { useRef, useState, MutableRefObject} from 'react';
+import { useState } from 'react';
 import styles from './styles.module.scss'
-
-// AIzaSyAWifE8HCuECIIVcvpArqw-4qfdz3rZDrw
+import { Circle, MapPin } from 'lucide-react';
 
 export default function Map() {
   const [from, setFrom] = useState("");
   const [to, setTo] = useState("");
-
-  let toInput: MutableRefObject<HTMLElement | undefined> = useRef(undefined);
-  let fromInput: MutableRefObject<HTMLElement | undefined> = useRef(undefined);
-
-  function buttonPressed() {
-    if (toInput !== undefined && fromInput !== undefined) {
-      let fromText = fromInput.current?.textContent?.toLowerCase();
-      fromText?.replaceAll(" ", "+");
-
-      let toText = toInput.current?.textContent?.toLowerCase();
-      toText?.replaceAll(" ", "+");
-
-      setFrom(fromText || "")
-      setTo(toText || "")
-    } 
-  }
 
   function addMap() {
     if (to === "" || from === "") {
@@ -32,7 +15,7 @@ export default function Map() {
 
     let apiKey = "AIzaSyAWifE8HCuECIIVcvpArqw-4qfdz3rZDrw"
 
-    let url = `https://www.google.com/maps/embed/v1/directions?key=${apiKey}&mode=transit&origin=${from}&destination=${to}`
+    let url = `https://www.google.com/maps/embed/v1/directions?key=${apiKey}&mode=transit&origin=${from}+adelaide+sa&destination=${to}+adelaide+sa`
 
     return (
       <iframe
@@ -43,16 +26,20 @@ export default function Map() {
   }
 
   return (
-    <div className="">
+    <div className={styles.primary}>
       <h1>Map</h1>
 
-      <div className={styles.primary}>
-        <input type="text" placeholder='From' ref={fromInput}/>
-        <input type="text" placeholder='To' ref={toInput}/>
-        <button onClick={buttonPressed}>Go!</button>
-
-        {addMap()}
+      <div className={styles.box}>
+        <Circle />
+        <input type="text" placeholder='From' value={from} onChange={(e) => { setFrom(e.target.value) }}/>
       </div>
-    </div>  
+
+      <div className={styles.box}>
+        <MapPin />
+        <input type="text" placeholder='To' value={to} onChange={(e) => { setTo(e.target.value) }}/>
+      </div>
+
+      {addMap()}
+    </div>
   );
 }
