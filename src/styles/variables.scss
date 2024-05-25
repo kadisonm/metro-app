@@ -10,6 +10,10 @@ $header-gradient-end: #57C0EE;
 $background-primary: #EAEAEA;
 $background-secondary: #797979;
 
+$card-regular-background: linear-gradient(to top, $color-primary, #83D7FB);
+$card-student-background: linear-gradient(to top, $color-yellow, #FFDE9F);
+$card-concession-background: linear-gradient(to top, $color-green, #88F0A7);
+
 $background-header: #FFFFFF;
 $background-footer: #FFFFFF;
 
