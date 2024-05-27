@@ -4,10 +4,15 @@
 body {
     background-color: $background-primary;
     margin: 0;
+    overflow: hidden;
+    width: 430;
+    height: 932;
 }
 
 .content {
     padding: 30px;
+    overflow-y: auto;
+    height: calc(100vh - 80px);
 }
 
 #large {
