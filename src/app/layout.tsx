@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 
 import "@/styles/globals.scss";
@@ -13,6 +13,12 @@ export const metadata: Metadata = {
   description: "",
 };
 
+export const viewport: Viewport = {
+  themeColor: "#000000",
+  initialScale: 1,
+  maximumScale: 1,
+};
+
 export default function RootLayout({children}: Readonly<{ children: React.ReactNode; }>) {
   return (
     <html lang="en">
@@ -20,11 +26,13 @@ export default function RootLayout({children}: Readonly<{ children: React.ReactN
         <meta name="referrer" content="no-referrer-when-downgrade" />
       </head>
       <body className={inter.className}>
-        <Header />
-        <div className="content">
-          {children}
+        <div className="phone">
+          <Header />
+          <div className="content">
+            {children}
+          </div>
+          <Nav />  
         </div>
-        <Nav />
       </body>
     </html>
   );
