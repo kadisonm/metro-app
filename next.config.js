@@ -1,6 +1,8 @@
+/** @type {import('next').NextConfig} */
 const nextConfig = {
-    output: "export",
-    images: {
-      unoptimized: true
-    },
- }
+  basepath: "/metro-app",
+  output: "export",
+  reactStrictMode: true,
+};
+
+export default nextConfig;
