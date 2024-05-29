@@ -15,7 +15,7 @@ export default function Map() {
 
     let apiKey = "AIzaSyAWifE8HCuECIIVcvpArqw-4qfdz3rZDrw"
 
-    let url = `https://www.google.com/maps/embed/v1/directions?key=${apiKey}&mode=transit&origin=${from}+adelaide+sa&destination=${to}+adelaide+sa`
+    let url = `https://www.google.com/maps/embed/v1/directions?key=${apiKey}&mode=transit&origin=${from}+australia&destination=${to}+australia`
 
     return (
       <iframe
