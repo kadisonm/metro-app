@@ -1,12 +1,19 @@
 @import 'src/styles/variables';
 
 @mixin card() {
-    width: 100%;
+    width: 90%;
     height: 200px;
     border-radius: 30px;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
+    padding: 20px;
+}
+
+.balance {
+    position: relative;
+    bottom: 5vh;
+}
+
+.type {
+
 }
 
 .concession {
