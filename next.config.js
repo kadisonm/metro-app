@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  basepath: "/metro-app",
+  basePath: "/metro-app",
   output: "export",
   reactStrictMode: true,
 };
