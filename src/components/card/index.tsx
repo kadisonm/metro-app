@@ -4,8 +4,6 @@ import styles from './styles.module.scss'
 
 import { EllipsisVertical } from 'lucide-react'
 
-import Image from 'next/image'
-
 export default function Card({ type }: { type: 'regular' | 'student' | 'concession' }) {
     return (
         <div className={styles[type]}>
@@ -23,7 +21,7 @@ export default function Card({ type }: { type: 'regular' | 'student' | 'concessi
             </div>   
             <div className={styles.right}>
                 <img 
-                    src="/metro_logo.png"
+                    src={"metro_logo.png"}
                     width={85}
                     height={50}
                 ></img>
