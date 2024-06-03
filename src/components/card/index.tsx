@@ -2,6 +2,10 @@
 
 import styles from './styles.module.scss'
 
+import { EllipsisVertical } from 'lucide-react'
+
+import Image from 'next/image'
+
 export default function Card({ type }: { type: 'regular' | 'student' | 'concession' }) {
     return (
         <div className={styles[type]}>
@@ -9,14 +13,25 @@ export default function Card({ type }: { type: 'regular' | 'student' | 'concessi
                 <div className=""></div>
             
                 <div className={styles.balance}>
-                    <h2>Balance</h2>
-                    <h1>$5.00</h1>
+                    <h3>Balance</h3>
+                    <h2>$5.00</h2>
                 </div>
 
                 <div className={styles.type}>
-                    <h2>{type[0].toUpperCase() + type.slice(1)}</h2>    
+                    <h3>{type[0].toUpperCase() + type.slice(1)}</h3>    
                 </div>
-            </div>     
+            </div>   
+            <div className={styles.right}>
+                <img 
+                    src="/metro_logo.png"
+                    width={85}
+                    height={50}
+                ></img>
+
+                <button className={styles.button} id="large">
+                    <EllipsisVertical/>
+                </button>
+            </div>
         </div>
     )
 }
