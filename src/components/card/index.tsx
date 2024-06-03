@@ -8,14 +8,14 @@ export default function Card({ type }: { type: 'regular' | 'student' | 'concessi
     return (
         <div className={styles[type]}>
             <div className={styles.left}>
-                <div className=""></div>
+                <div/>
             
-                <div className={styles.balance}>
+                <div>
                     <h3>Balance</h3>
                     <h2>$5.00</h2>
                 </div>
 
-                <div className={styles.type}>
+                <div>
                     <h3>{type[0].toUpperCase() + type.slice(1)}</h3>    
                 </div>
             </div>   
