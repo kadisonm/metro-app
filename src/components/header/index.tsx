@@ -14,7 +14,9 @@ export default function Header() {
                 <h3>52:00</h3>
             </div>
 
-            <Settings id="small" />
+            <div className={styles.settings}>
+                <Settings id="small" />
+            </div>
         </div>
     )
 }
