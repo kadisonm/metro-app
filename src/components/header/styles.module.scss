@@ -19,9 +19,7 @@
         width: 32px;
         height: 32px;
 
-        svg {
-            color: $text-normal;
-        }
+        color: $text-normal;
 
         * {
             transition: color .2s ease;
@@ -43,7 +41,9 @@
         border-radius: 90px;
         gap: 10px;
 
-        color: $text-inverted;
+        * {
+            color: $text-inverted;
+        }
 
         background: linear-gradient(to right, $header-gradient-start, $header-gradient-end);
     }
