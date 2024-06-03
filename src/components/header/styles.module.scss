@@ -34,9 +34,11 @@
 
     .validated {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
-        padding: 2px 20px 2px 20px;
+
+        width: 110px;
+        padding: 5px 20px 5px 20px;
    
         border-radius: 90px;
         gap: 10px;
