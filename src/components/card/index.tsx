@@ -28,9 +28,11 @@ export default function Card({ type }: { type: 'regular' | 'student' | 'concessi
                     height={50}
                 ></img>
 
-                <button className={styles.button} id="large">
-                    <EllipsisVertical/>
-                </button>
+                <div className={styles.button}>
+                    <EllipsisVertical id="medium"/>
+
+                    <div/>
+                </div>
             </div>
         </div>
     )

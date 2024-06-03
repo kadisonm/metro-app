@@ -19,12 +19,6 @@
         }  
     }
 
-    :hover {
-        * {
-            color: $color-primary;
-        }
-    }
-
     .item {
         display: flex;
         flex-direction: column;
@@ -34,6 +28,17 @@
 
         width: 70px;
         height: 70px;
+
+        * {
+            transition: color .2s ease;
+        }
+        
+        &:hover {
+            * {
+                color: $color-primary;
+            }
+            
+        }
 
         h4 {
             font-weight: 600;

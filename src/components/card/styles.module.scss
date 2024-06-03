@@ -1,13 +1,13 @@
 @import 'src/styles/variables';
 
 @mixin card() {
-    width: 90%;
-    height: 200px;
+    width: 80%;
+    height: 170px;
     border-radius: 30px;
-    padding: 20px;
+    padding: 25px;
 
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 
     color: white;
 
@@ -20,12 +20,38 @@
     }
 
     .button {
-        color: white;
-        border: 0;
-        border-radius: 10px;
+        height: 32px;
+        width: 32px;
         display: flex;
         align-items: center;
+        justify-content: center;
+        position: relative;
 
+        div {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            mix-blend-mode: screen;
+            background-color: #FFFFFF;
+            opacity: 50%;  
+            z-index: 1;
+            border-radius: 10px;
+            transition: background-color 0.1s ease;
+
+            &:hover {
+                background-color: #a9a9a9;
+            }
+
+            &:active {
+                background-color: #FFFFFF;
+            }
+        }
+
+        svg {
+            color: #FFFFFF;
+            z-index: 2;
+            pointer-events: none;
+        }
     }
 }
 
@@ -34,7 +60,7 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .right {
