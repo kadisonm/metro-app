@@ -30,7 +30,7 @@ export default function Header() {
             <div className="empty" />
             <div className={styles.validated}>
                 <CircleCheck id="small" />
-                <h3>`59:00`</h3>
+                <h3>59:00</h3>
             </div>
 
             <div className={styles.settings}>
