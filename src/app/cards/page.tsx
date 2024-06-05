@@ -2,8 +2,6 @@
 
 import Card from "@/components/card";
 
-import { Plus } from "lucide-react";
-
 import styles from './styles.module.scss'
 
 export default function Cards() {

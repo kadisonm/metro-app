@@ -4,7 +4,6 @@ import styles from './styles.module.scss'
 
 import { CircleCheck } from 'lucide-react';
 import { Settings } from 'lucide-react';
-import Link from 'next/link';
 
 import { useState, useEffect } from 'react';
 
