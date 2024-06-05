@@ -4,6 +4,7 @@ import styles from './styles.module.scss'
 
 import { CircleCheck } from 'lucide-react';
 import { Settings } from 'lucide-react';
+import Link from 'next/link';
 
 import { useState, useEffect } from 'react';
 
@@ -35,11 +36,12 @@ export default function Header() {
         };
     });
 
-    console.log("rerender", time)
-
     return (
         <div className={styles.primary}>
-            <div className="empty" />
+            <div>
+
+            </div>
+            
             <div className={styles.validated}>
                 <CircleCheck id="small" />
                 <h3>{`${String(time.minutes).padStart(2, '0')}:${String(time.seconds).padStart(2, '0')}`}</h3>

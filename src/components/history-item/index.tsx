@@ -2,9 +2,7 @@
 
 import styles from './styles.module.scss'
 
-import { CircleCheck, CircleX, TramFront, TrainFront, BusFront } from 'lucide-react';
-import { Settings } from 'lucide-react';
-
+import { TramFront, TrainFront, BusFront } from 'lucide-react';
 
 export default function HistoryItem(
     { type, transport, time, route, price }: { type: 'validated' | 'failed', transport: 'train' | 'tram' | 'bus', time: string, route: string, price: string }

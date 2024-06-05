@@ -4,7 +4,22 @@ import styles from './styles.module.scss'
 
 import { EllipsisVertical } from 'lucide-react'
 
-export default function Card({ type }: { type: 'regular' | 'student' | 'concession' }) {
+import { useRouter } from 'next/navigation'
+
+export default function Card({ type, edit }: { type: 'regular' | 'student' | 'concession', edit: boolean }) {
+    const router = useRouter()
+
+    function addButton() {
+        return (
+            <div className={styles.button} onClick={() => {
+                router.push(`/edit/${type}`);
+            }}>
+                <EllipsisVertical id="medium"/>
+                <div />
+            </div>
+        )
+    }
+
     return (
         <div className={styles[type]}>
             <div className={styles.left}>
@@ -21,16 +36,12 @@ export default function Card({ type }: { type: 'regular' | 'student' | 'concessi
             </div>   
             <div className={styles.right}>
                 <img 
-                    src={"metro_logo.png"}
+                    src={"/metro-app/metro_logo.png"}
                     width={85}
                     height={50}
                 ></img>
 
-                <div className={styles.button}>
-                    <EllipsisVertical id="medium"/>
-
-                    <div/>
-                </div>
+                {edit === true && addButton()}
             </div>
         </div>
     )

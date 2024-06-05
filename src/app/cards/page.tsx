@@ -12,15 +12,15 @@ export default function Cards() {
       <h1>Cards</h1>
 
       <div className={styles.list}>
-        <Card type='regular' />
-        <Card type='regular' />
-        <Card type='student' />
-        <Card type='concession' />
-        <Card type='student' /> 
+        <Card type='regular' edit={true} />
+        <Card type='regular' edit={true} />
+        <Card type='student' edit={true} />
+        <Card type='concession' edit={true} />
+        <Card type='student' edit={true} /> 
 
-        <div className={styles.new}>
+        {/* <div className={styles.new}>
           <Plus id="large"/>
-        </div>
+        </div> */}
       </div>
     </div>
   );

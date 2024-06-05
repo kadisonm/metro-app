@@ -1,0 +1,42 @@
+@import 'src/styles/variables';
+
+.primary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+
+    width: 100%;
+
+    .inactive {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #BEBEBE;
+        color: $text-inverted;
+        border-radius: 15px;
+        width: 100%;
+        height: 70px;
+    }
+
+    .active {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #A3A3A3;
+        transition: background-color .2s ease;
+        color: $text-inverted;
+        border-radius: 15px;
+        width: 100%;
+        height: 70px;
+
+        &:hover {
+            background-color: #868686;
+        }
+
+        &:active {
+            background-color: rgb(157, 157, 157);
+        }
+    }
+}

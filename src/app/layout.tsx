@@ -19,7 +19,7 @@ export const viewport: Viewport = {
   maximumScale: 1,
 };
 
-export default function RootLayout({children}: Readonly<{ children: React.ReactNode; }>) {
+export default function RootLayout({ modals, children}: Readonly<{ modals: React.ReactNode, children: React.ReactNode; }>) {
   return (
     <html lang="en">
       <body className={inter.className}>
@@ -29,6 +29,8 @@ export default function RootLayout({children}: Readonly<{ children: React.ReactN
             {children}
           </div>
           <Nav />  
+
+          {modals}
         </div>
       </body>
     </html>
