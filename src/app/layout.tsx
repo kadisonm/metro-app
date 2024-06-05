@@ -9,12 +9,12 @@ import Nav from "@/components/nav";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "AdlMetro",
-  description: "",
+  title: "Adelaide Metro (Unofficial)",
+  description: "A mock metro app for a school assignment.",
 };
 
 export const viewport: Viewport = {
-  themeColor: "#000000",
+  themeColor: "#26A8E0",
   initialScale: 1,
   maximumScale: 1,
 };
