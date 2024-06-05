@@ -5,11 +5,15 @@ A mock Adelaide Metro app for a school assignment.
 
 You can try it [here](https://kadisonm.github.io/metro-app/).
 
-## Disclaimer
+---
+
+### Disclaimer
 
 Completed: 6/06/2024
 
-*This project is not associated with Adelaide Metro, and has no financial gain. Nor is it official or functional.*
+*This project is not associated with Adelaide Metro, and has no financial gain. It is NOT official or functional.*
+
+---
 
 ## About
 
