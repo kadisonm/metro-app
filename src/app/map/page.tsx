@@ -9,25 +9,38 @@ export default function Map() {
   const [to, setTo] = useState("");
 
   function addMap() {
-    if (to === "" || from === "") {
-      return;
-    }
-
     let apiKey = "AIzaSyAWifE8HCuECIIVcvpArqw-4qfdz3rZDrw"
 
-    let url = `https://www.google.com/maps/embed/v1/directions?key=${apiKey}&mode=transit&origin=${from}+australia&destination=${to}+australia`
+    let url = `https://www.google.com/maps/embed/v1/search?key=${apiKey}&q=interchanges+adelaide+australia`;
+
+    let origin = from.replace(" ", "+");
+    let destination = to.replace(" ", "+");
+
+    if (origin !== "") {
+      url = `https://www.google.com/maps/embed/v1/search?key=${apiKey}&q=${origin}+adelaide+australia`;
+    }
+    
+    if (destination !== "")  {
+      url = `https://www.google.com/maps/embed/v1/search?key=${apiKey}&q=${destination}+adelaide+australia`;
+    }
+    
+    if (origin !== "" && destination !== "") {
+      url = `https://www.google.com/maps/embed/v1/directions?key=${apiKey}&mode=transit&origin=${origin}+australia&destination=${destination}+adelaide+australia`;
+    }
 
     return (
       <iframe
-          loading="lazy"
-          src={url}>
+        loading="lazy"
+        src={url}>
       </iframe>
-    )
+    );
   }
 
   return (
     <div className={styles.primary}>
       <h1>Map</h1>
+
+      <h3>Where to next?</h3>
 
       <div className={styles.box}>
         <Circle />

@@ -1,5 +1,67 @@
 @import 'src/styles/variables';
 
 .primary {
-   
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+
+    gap: 20px;
+
+    margin: 30px 0px 30px 0px;
+
+    .left {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+
+        color: $text-normal;
+
+        h4 {
+            font-weight: 500;
+            margin-bottom: 3px;
+        }
+
+        p {
+            color: $text-muted;
+        }
+
+        .icon {
+            border-radius: 100%;
+            background-color: $background-primary;
+            padding: 5px;
+        }
+    }
+
+    .right {
+        display: flex;
+        flex-direction: column;
+        align-items: right;
+        justify-content: center;
+
+        text-align: right;
+
+        h3 {
+            margin: 0;
+            color: $text-normal;
+            margin-bottom: 3px;
+        }
+
+        p {
+            text-align: right;
+            color: $text-normal;
+        }
+
+        .validated {
+            color: #296AE1;
+        }
+
+        .failed {
+            color: $color-red;
+        }
+    }
 }
