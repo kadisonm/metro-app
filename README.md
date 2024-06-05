@@ -27,4 +27,4 @@ Personal data is NOT collected by the site.
 
 ## License
 
-This work is licensed under GNU v3. Feel free to use this as a learning resource or built upon it.
+This work is licensed under GNU v3. Feel free to use this as a learning resource or build upon it.
