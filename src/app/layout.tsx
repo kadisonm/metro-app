@@ -22,6 +22,9 @@ export const viewport: Viewport = {
 export default function RootLayout({ children}: Readonly<{ children: React.ReactNode; }>) {
   return (
     <html lang="en">
+      <head>
+        <base href="/metro-app/">
+      </head>
       <body className={inter.className}>
         <div className="phone">
           <Header />
